@@ -1,0 +1,126 @@
+  :root {
+    /* Softer matte color palette */
+    --matte-navy: #5a6170;
+    --matte-olive: #a3a17e;
+    --matte-clay: #85624a;
+    --matte-rose: #d3a8a8;
+    --matte-gray: #b6b6b5;
+    --matte-teal: #233833;
+    --matte-mauve: #a9989e;
+
+    /* Other colors */
+    --background: var(--matte-clay);
+    --text-color: var(--matte-gray);
+    --main-bg: var(--matte-teal);
+    --button-bg: var(--matte-olive);
+    --button-hover-bg: var(--matte-clay);
+    --link-color: var(--matte-rose);
+    --link-hover-color: var(--matte-mauve);
+    --footer-bg: var(--matte-navy);
+    --footer-text: var(--matte-gray);
+    --footer-border: var(--matte-olive);
+  }
+
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: 3fr 2fr ;
+    grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer"
+    ;
+    min-height: 100vh;
+    main {
+      padding: 20px;
+      background-color: var(--main-bg);
+      color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    header {
+      grid-area: header;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      nav{
+        display: flex;
+      }
+    }
+    
+    main {
+      grid-area: main;
+    }
+    footer {
+      grid-area: footer;
+      background-color: var(--footer-bg);
+      color: var(--footer-text);
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--footer-border);
+    }
+    aside {
+      grid-area: aside;
+      padding: 20px;
+      background-color: black;
+    }
+  }
+
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    :hover {
+      color: var(--link-hover-color);
+    }
+  }
+
+  button {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    :hover {
+      background-color: var(--button-hover-bg);
+    }
+    embed{
+      min-width: 200px;
+      min-height: 200px;
+    }
+  }
+
+@media (min-width: 600px) {
+  body {
+    max-width: 1000px;
+    margin: auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer"
+    ;
+  }
+
+}
+
+@media (min-width: 900px) {
+  body {
+    max-width: 1000px;
+    margin: auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer"
+    ;
+    gap: 20px;
+  }
+}
