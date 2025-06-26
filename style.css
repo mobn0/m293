@@ -49,6 +49,7 @@
       padding: 20px;
       nav{
         display: flex;
+        grid-area: nav;
       }
     }
     
