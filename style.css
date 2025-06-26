@@ -27,7 +27,7 @@
     background-color: var(--background);
     color: var(--text-color);
     display: grid;
-    grid-template-columns: 3fr 2fr ;
+    grid-template-columns: 1fr  ;
     grid-template-areas:
     "header"
     "main"
@@ -99,7 +99,7 @@
   body {
     max-width: 1000px;
     margin: auto;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "header header"
     "main aside"
@@ -115,9 +115,9 @@
     margin: auto;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-    "header header header"
-    "main main aside"
-    "footer footer footer"
+    "headerheader"
+    "main aside"
+    "footer footer"
     ;
     gap: 20px;
   }
