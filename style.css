@@ -49,7 +49,6 @@
       padding: 20px;
       nav{
         display: flex;
-        grid-area: nav;
       }
     }
     
@@ -103,7 +102,6 @@
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
     "header header"
-    "nav nav"
     "main aside"
     "footer footer"
     ;
@@ -118,7 +116,6 @@
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
     "header header header"
-    "nav nav nav"
     "main main aside"
     "footer footer footer"
     ;
