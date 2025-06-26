@@ -116,10 +116,10 @@
     margin: auto;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-    "header header"
-    "nav nav"
+    "header header header"
+    "nav nav nav"
     "main main aside"
-    "footer footer"
+    "footer footer footer"
     ;
     gap: 20px;
   }
