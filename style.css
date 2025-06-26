@@ -46,6 +46,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    .nav {
+      display: contents;
+    }
   }
 
   main {
@@ -93,7 +96,7 @@ button {
 
 @media (min-width: 600px) {
   nav {
-    display: flex;
+    display: flex !important;
   }
   body {
     max-width: 1000px;
@@ -108,7 +111,7 @@ button {
 
 @media (min-width: 900px) {
   nav {
-    display: flex;
+    display: flex !important;
   }
   body {
     max-width: 1000px;
