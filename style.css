@@ -62,6 +62,9 @@ body {
     text-align: center;
     font-size: 0.9rem;
     border-top: 1px solid var(--footer-border);
+    a {
+      margin-bottom: 5px;
+    }
   }
   aside {
     grid-area: aside;
