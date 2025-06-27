@@ -28,15 +28,20 @@
     </header>
 
     <main class="container my-4">
+      <!-- form: enthält alle Formularinhalte, wird an Server gesendet -->
       <form
         action="https://gibm.becknet.ch/formular/formular.php"
         method="post"
         class="needs-validation"
         novalidate
       >
+        <!-- fieldset: gruppiert verwandte Formularelemente -->
         <fieldset class="mb-4 border p-3 rounded">
+          <!-- legend: Titel des fieldsets -->
           <legend class="w-auto px-2">Personal info</legend>
 
+          <!-- label: beschreibt ein Eingabefeld -->
+          <!-- input type="text": für Textangaben -->
           <div class="mb-3">
             <label for="name" class="form-label">Please enter your Name:</label>
             <input
@@ -51,10 +56,9 @@
             />
           </div>
 
+          <!-- input type="tel": für Telefonnummern -->
           <div class="mb-3">
-            <label for="phone_number" class="form-label"
-              >Enter your phone number:</label
-            >
+            <label for="phone_number" class="form-label">Enter your phone number:</label>
             <input
               type="tel"
               name="phone_number"
@@ -64,10 +68,9 @@
             />
           </div>
 
+          <!-- input type="date": für Zeitangaben -->
           <div class="mb-3">
-            <label for="birthday" class="form-label"
-              >Please enter your birthday:</label
-            >
+            <label for="birthday" class="form-label">Please enter your birthday:</label>
             <input
               type="date"
               name="birthday"
@@ -76,10 +79,9 @@
             />
           </div>
 
+          <!-- input type="url": für Webadressen -->
           <div class="mb-3">
-            <label for="favsite" class="form-label"
-              >Please enter your favourite website:</label
-            >
+            <label for="favsite" class="form-label">Please enter your favourite website:</label>
             <input
               type="url"
               name="favsite"
@@ -88,10 +90,9 @@
             />
           </div>
 
+          <!-- input type="password": für Passworteingaben -->
           <div class="mb-3">
-            <label for="paswd" class="form-label"
-              >Please enter your password:</label
-            >
+            <label for="paswd" class="form-label">Please enter your password:</label>
             <input
               minlength="8"
               type="password"
@@ -101,17 +102,21 @@
             />
           </div>
 
+          <!-- input type="email": für Emailadressen -->
           <div class="mb-3">
-            <label for="email" class="form-label"
-              >Please enter your email:</label
-            >
-            <input type="email" name="email" id="email" class="form-control" placeholder="hello@example.com" />
+            <label for="email" class="form-label">Please enter your email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              placeholder="hello@example.com"
+            />
           </div>
 
+          <!-- select: für Drop-down Auswahl -->
           <div class="mb-3">
-            <label for="faveditor" class="form-label"
-              >Please select your favourite editor:</label
-            >
+            <label for="faveditor" class="form-label">Please select your favourite editor:</label>
             <select name="faveditor" id="faveditor" class="form-select">
               <option value="vim">vim</option>
               <option value="Sublime">Sublime</option>
@@ -123,12 +128,11 @@
         <fieldset class="mb-4 border p-3 rounded">
           <legend class="w-auto px-2">Why this website is great</legend>
 
+          <!-- input type="number": für Zahlenangaben -->
           <div class="mb-3">
-            <label for="rating_text" class="form-label"
-              >Please rate this website from 1 - 10</label
-            >
+            <label for="rating_text" class="form-label">Please rate this website from 1 - 10</label>
             <input
-            required
+              required
               type="number"
               id="rating_text"
               name="rating_text"
@@ -138,10 +142,9 @@
             />
           </div>
 
+          <!-- input type="text" + readonly: für nur-lesbare Textangabe -->
           <div class="mb-3">
-            <label for="kritik" class="form-label"
-              >Please give your kritik to this website</label
-            >
+            <label for="kritik" class="form-label">Please give your kritik to this website</label>
             <input
               type="text"
               name="kritik"
@@ -153,6 +156,7 @@
 
           <p>Please select the correct rating for this website again:</p>
 
+          <!-- input type="radio": für Einzelauswahl -->
           <div class="form-check">
             <input
               type="radio"
@@ -164,6 +168,8 @@
             />
             <label for="low" class="form-check-label">1/10</label>
           </div>
+
+          <!-- input type="radio": für Einzelauswahl -->
           <div class="form-check">
             <input
               type="radio"
@@ -174,6 +180,8 @@
             />
             <label for="med" class="form-check-label">10/10</label>
           </div>
+
+          <!-- input type="radio": für Einzelauswahl -->
           <div class="form-check mb-3">
             <input
               type="radio"
@@ -187,6 +195,7 @@
 
           <p>Why is this website so great?</p>
 
+          <!-- input type="checkbox": für Mehrfachauswahl -->
           <div class="form-check">
             <input
               type="checkbox"
@@ -194,10 +203,10 @@
               id="made_by_noe"
               class="form-check-input"
             />
-            <label for="made_by_noe" class="form-check-label"
-              >because it's made by Noé</label
-            >
+            <label for="made_by_noe" class="form-check-label">because it's made by Noé</label>
           </div>
+
+          <!-- input type="checkbox": für Mehrfachauswahl -->
           <div class="form-check">
             <input
               type="checkbox"
@@ -205,10 +214,10 @@
               id="no_php"
               class="form-check-input"
             />
-            <label for="no_php" class="form-check-label"
-              >because it does not contain php</label
-            >
+            <label for="no_php" class="form-check-label">because it does not contain php</label>
           </div>
+
+          <!-- input type="checkbox": für Mehrfachauswahl -->
           <div class="form-check mb-3">
             <input
               type="checkbox"
@@ -216,12 +225,12 @@
               id="looks"
               class="form-check-input"
             />
-            <label for="looks" class="form-check-label"
-              >because it looks incredible</label
-            >
+            <label for="looks" class="form-check-label">because it looks incredible</label>
           </div>
+
         </fieldset>
 
+        <!-- button: zum Abschicken des Formulars -->
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </main>
@@ -233,6 +242,5 @@
         <a class="d-block text-white" href="tel:+410767991399">Call me</a>
       </div>
     </footer>
-
   </body>
 </html>

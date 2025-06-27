@@ -121,9 +121,10 @@ button {
     margin: auto;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-      "headerheader"
+      "header header"
       "main aside"
       "footer footer";
     gap: 20px;
   }
 }
+<

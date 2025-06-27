@@ -17,6 +17,7 @@
   <body>
     <header class="bg-primary text-white p-3">
       <nav class="nav justify-content-center mb-3">
+        <!-- relative Links zu anderen Seiten -->
         <a class="nav-link text-white" href="index.html">Home</a>
         <a class="nav-link text-white" href="languages.html">Languages</a>
         <a class="nav-link text-white" href="editors.html">Editors</a>
@@ -30,6 +31,8 @@
     <main class="container my-4 bg-matte-teal text-white p-4 rounded shadow-sm">
       <section class="mb-4">
         <h2>Star Wars</h2>
+        <!-- eingebettetes Video von externer Quelle -->
+        <!-- Vorteil: kein Speicherverbrauch auf Server, Nachteil: Abhängigkeit von externer Quelle -->
         <iframe
           sandbox="allow-scripts allow-same-origin"
           src="//noemovies.ltd"
@@ -43,9 +46,12 @@
       </section>
 
       <section class="mb-4">
+        <!-- picture: verschiedene Bildformate (webp, png, jpg) für bessere Performance -->
+        <!-- Vorteil WebP: kleinere Dateigrösse bei guter Qualität -->
         <picture class="d-block mx-auto mb-3" style="max-width: 300px;">
           <source srcset="./spotify.webp" type="image/webp" />
           <source srcset="./spotify.png" type="image/png" />
+          <!-- fallback zu jpg falls die anderen Formate nicht unterstützt werden -->
           <img
             src="./spotify.jpg"
             alt="Spotify logo"
@@ -56,6 +62,8 @@
       </section>
 
       <section class="mb-4 text-center">
+        <!-- lokale Audiodateien mit zwei Codecs (ogg, mp3) -->
+        <!-- Vorteil: Kontrolle über Datei, Nachteil: mehr Speicher nötig -->
         <audio controls>
           <source src="i-am-your-father.ogg" type="audio/ogg" />
           <source src="i-am-your-father.mp3" type="audio/mpeg" />
@@ -64,6 +72,8 @@
       </section>
 
       <section>
+        <!-- eingebettete Karte von Google Maps -->
+        <!-- Externer Dienstleister, Vorteil: interaktiv, Nachteil: Datenschutz -->
         <iframe
           src="https://www.google.com/maps/embed"
           width="100%"
@@ -80,12 +90,13 @@
     <footer class="bg-dark text-white text-center p-3 mt-5">
       <div>
         <p class="mb-1">© Noé Marx</p>
+        <!-- korrekte Verlinkung von Email-Adresse -->
         <a class="d-block text-white" href="mailto:noe@marx.ch"
           >Contact me</a
         >
+        <!-- korrekte Verlinkung von Telefonnummer -->
         <a class="d-block text-white" href="tel:+410767991399">Call me</a>
       </div>
     </footer>
-
   </body>
 </html>
